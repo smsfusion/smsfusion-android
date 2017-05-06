@@ -73,6 +73,10 @@ public class JsonUtil {
       return new TypeToken<List<OutOfCredit>>(){}.getType();
     }
     
+    if ("SMSResult".equalsIgnoreCase(className)) {
+      return new TypeToken<List<SMSResult>>(){}.getType();
+    }
+    
     return new TypeToken<List<Object>>(){}.getType();
   }
 
@@ -93,6 +97,10 @@ public class JsonUtil {
     
     if ("OutOfCredit".equalsIgnoreCase(className)) {
       return new TypeToken<OutOfCredit>(){}.getType();
+    }
+    
+    if ("SMSResult".equalsIgnoreCase(className)) {
+      return new TypeToken<SMSResult>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

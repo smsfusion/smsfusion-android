@@ -58,12 +58,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import io.swagger.client.api.DefaultApi;
+import io.swagger.client.api.HLRApi;
 
-public class DefaultApiExample {
+public class HLRApiExample {
 
     public static void main(String[] args) {
-        DefaultApi apiInstance = new DefaultApi();
+        HLRApi apiInstance = new HLRApi();
         String key = "key_example"; // String | API Key as generated from the <a href='https://www.smsfusion.com.au/admin/api/'>admin panel</a>
         String num = "num_example"; // String | A single phone number or <a href='https://www.smsfusion.com.au/help/msisdn/'>MSDISDN</a>
         String cc = "cc_example"; // String | 2 character country code <a href='https://en.wikipedia.org/wiki/ISO_3166-2'>ISO 3166-2</a> for formatting local numbers internationally
@@ -71,7 +71,7 @@ public class DefaultApiExample {
             HLRCallback result = apiInstance.getHLR(key, num, cc);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#getHLR");
+            System.err.println("Exception when calling HLRApi#getHLR");
             e.printStackTrace();
         }
     }
@@ -81,12 +81,13 @@ public class DefaultApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.smsfusion.com.au/*
+All URIs are relative to *https://api.smsfusion.com.au/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**getHLR**](docs/DefaultApi.md#getHLR) | **GET** /hlr/ | HLR number lookup
-*DefaultApi* | [**getHLRCallback**](docs/DefaultApi.md#getHLRCallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*HLRApi* | [**getHLR**](docs/HLRApi.md#getHLR) | **GET** /hlr/ | HLR number lookup
+*HLRApi* | [**getHLRCallback**](docs/HLRApi.md#getHLRCallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SMSApi* | [**sendSMS**](docs/SMSApi.md#sendSMS) | **GET** /sms/ | Send an SMS
 
 
 ## Documentation for Models
@@ -95,6 +96,7 @@ Class | Method | HTTP request | Description
  - [HLRError](docs/HLRError.md)
  - [HLRResult](docs/HLRResult.md)
  - [OutOfCredit](docs/OutOfCredit.md)
+ - [SMSResult](docs/SMSResult.md)
 
 
 ## Documentation for Authorization
